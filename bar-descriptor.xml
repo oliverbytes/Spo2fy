@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+    <id>com.nemory.spo2fy</id>
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7-g/Spo2fy" entry="true" type="Qnx/Elf">Spo2fy</asset>
+    </configuration>
+    <configuration name="Device-Release">
+       <entryPointType>Qnx/Cascades</entryPointType>
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm/o.le-v7/Spo2fy.so" entry="true" type="Qnx/Elf">Spo2fy.so</asset>
+    </configuration> 
+    <configuration name="Device-Profile">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="arm-p/o.le-v7-g/Spo2fy" entry="true" type="Qnx/Elf">Spo2fy</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
+       <platformArchitecture>x86</platformArchitecture>
+       <asset path="x86/o-g/Spo2fy" entry="true" type="Qnx/Elf">Spo2fy</asset>
+    </configuration>
+    <name>Spo2fy</name>
+    <versionNumber>0.0.2</versionNumber>
+    <buildId>1</buildId>
+    <description>The Spo2fy application</description>
+    <icon>
+       <image>icon144.png</image>
+    </icon>
+    <splashScreens>
+       <image>SplashQ10.jpg</image>
+       <image>SplashZ10.jpg</image>
+    </splashScreens>
+    <author>Nemory Studios</author>
+
+    <initialWindow>
+        <autoOrients>true</autoOrients>
+        <systemChrome>none</systemChrome>
+    </initialWindow>
+
+
+    <asset path="assets">assets</asset>
+
+    <!-- Locale support -->
+    <asset path="translations" dest="qm">
+        <include name="*.qm"/>
+    </asset>
+    <asset path="assets/images/icon144.png">icon144.png</asset>
+    <asset path="assets/images/SplashQ10.jpg">SplashQ10.jpg</asset>
+    <asset path="assets/images/SplashZ10.jpg">SplashZ10.jpg</asset>
+
+    <!-- Request permission to execute native code.  Required for native applications. -->
+    <permission system="true">run_native</permission>
+    <permission>bbm_connect</permission>
+    <permission>read_device_identifying_information</permission>
+    <permission>access_internet</permission>
+    <permission>record_audio</permission>
+    <permission>post_notification</permission>
+    <permission>run_when_backgrounded</permission>
+    <permission>access_shared</permission>
+    <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+    <env var="CASCADES_THEME" value="dark"/>
+
+</qnx>
