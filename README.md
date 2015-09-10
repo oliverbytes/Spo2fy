@@ -6,3 +6,5 @@ Written in: Qt, QML, C/C++, Javascript, QXMPP Library, BlackBerry Cascades SDK, 
 Others: Parse.com Web Panel/System for Controlling Users and the App: PRO Exemption, Announcements, Updates, etc...
 
 SpotifyAPI
+
+Video Demo: https://www.youtube.com/watch?v=xWN-xkS-sbY
